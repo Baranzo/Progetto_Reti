@@ -3,7 +3,7 @@ Progetto_Reti
 
 Repository per il progetto relativo al corso di reti di calcolatori
 
-# Siamo agli inizi, ancora da definire bene la struttura del progetto, intanto iniziamo con le linee guida generali
+Raccolta dati e parti di codice utili, o presunti tali, per la realizzazione della parte iniziale del progetto
 
 Savino Sasso
 Riccardo Baranzoni
