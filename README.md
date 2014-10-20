@@ -7,3 +7,5 @@ Raccolta dati e parti di codice utili, o presunti tali, per la realizzazione del
 
 Savino Sasso
 Riccardo Baranzoni
+
+Per maggiori info e seguire la roadmap vedi la pagina wiki
