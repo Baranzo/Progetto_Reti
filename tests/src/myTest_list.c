@@ -25,6 +25,13 @@
 #include "myTest.h"
 
 //dummy del piffero, intanto provo ste benedette funzioni
+
+ipAddr insert_ip (ipAddr *root, ipAddr)
+{
+		ipAddr *pt;
+		
+}
+
 sys_info* fill_dummy(sys_info *pt)
 {
 	interface *intf;

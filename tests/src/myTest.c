@@ -63,7 +63,10 @@ void sys_json (json_t *json,sys_info *pt)
 	
 	
 	json_object_set_new(json,"memory",json_integer((json_int_t)pt->memory));
+	
 }
+
+
 
 int main(int argc, char **argv)
 {
@@ -84,7 +87,24 @@ int main(int argc, char **argv)
 	sys_json(json,dummy);
 	
 	
-	printf("%s \n",json_dumps(json,0));
+	
+	json_t *arr;
+	json_t *intf;
+	
+	size_t i=0;
+	arr=json_array();
+
+	intf=json_object();
+	json_object_set(intf,"type",json_string("wireless"));
+	json_object_set(intf,"name",json_string("wifi0"));
+	json_array_insert_new(arr,i,intf);
+	
+	json_object_set_new(json,"interfaces",arr);
+	
+	
+	
+	
+	printf("%s \n",json_dumps(,0));
 	
 	/* metti 0 in fondo a json_dumps per farlo iterare per tutto il json
 	 * che gli passi
