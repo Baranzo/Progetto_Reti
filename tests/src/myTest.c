@@ -32,38 +32,6 @@
  
 #include "myTest.h"
 
-//dummy del piffero, intanto provo ste benedette funzioni
-sys_info* fill_dummy(sys_info *pt)
-{
-	interface *intf;
-	ipAddr *ip;
-	
-	pt=(sys_info*)malloc(sizeof(sys_info));
-	intf=(interface*)malloc(sizeof(interface));
-	ip=(ipAddr*)malloc(sizeof(ipAddr));
-	
-	strcpy(pt->hostname,"BaranzoDummy");
-	strcpy(pt->os_name,"Baranzian");
-	strcpy(pt->os_version,"0.0.0");
-	strcpy(pt->manufacturer,"BaranzoCorp.");
-	pt->memory=65536;
-	
-	
-	strcpy(intf->type,"optical");
-	strcpy(intf->ker_name,"opt0");
-	strcpy(intf->mac_addr,"ab:cd:ef:00:11:22");
-	strcpy(intf->dev, "optif0");
-	
-	strcpy(ip->addr,"192.168.0.1");
-	strcpy(ip->scope,"link");
-	strcpy(ip->version,"IPv4");
-	
-	pt->interfaces=intf;
-	intf->ip=ip;
-	
-	return pt;
-	
-}
 
 /* qua bisogna decidere se uno vuole fare il json tutto in una botta o 
  * se è preferibile farlo in maniera separata. Io lo farei separato
@@ -122,10 +90,8 @@ int main(int argc, char **argv)
 	 * che gli passi
 	*/
 	
-	/* c'è già la funzione per fare il dump su file se vogliamo 
-	 * piazzarlo su file direttamente
-	 *json_dump_file(...);
-	*/ 
+	//stessa storia di sopra ma con output su file
+	json_dump_file(json,"./test.json",0);
 	return 0;
 }
 

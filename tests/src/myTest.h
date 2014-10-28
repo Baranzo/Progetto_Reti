@@ -47,3 +47,5 @@ typedef struct sys_info{
 	interface *interfaces;
 }sys_info;
 
+
+sys_info* fill_dummy(sys_info *pt);
