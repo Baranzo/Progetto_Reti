@@ -111,7 +111,7 @@ int main(int argc, char **argv)
 	*/
 	
 	//stessa storia di sopra ma con output su file
-	json_dump_file(json,"./test.json",0);
+	json_dump_file(json,"../test.json",0);
 	return 0;
 }
 
