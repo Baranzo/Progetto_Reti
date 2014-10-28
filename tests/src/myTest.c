@@ -104,7 +104,7 @@ int main(int argc, char **argv)
 	
 	
 	
-	printf("%s \n",json_dumps(,0));
+	printf("%s \n",json_dumps(json,0));
 	
 	/* metti 0 in fondo a json_dumps per farlo iterare per tutto il json
 	 * che gli passi
