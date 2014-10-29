@@ -88,15 +88,40 @@ int main(int argc, char **argv)
 	
 	
 	
-	json_t *arr;
-	json_t *intf;
+	json_t *arr,*arr2;
+	json_t *intf,*ip;
 	
 	size_t i=0;
 	arr=json_array();
 
+	//primo livello
 	intf=json_object();
 	json_object_set(intf,"type",json_string("wireless"));
 	json_object_set(intf,"name",json_string("wifi0"));
+	json_array_insert_new(arr,i,intf);
+	
+		//secondo livello
+		arr2=json_array();
+		ip=json_object();
+		json_object_set(ip,"address",json_string("192.168.0.1"));
+		json_object_set(ip,"scope",json_string("local"));
+		json_array_insert_new(arr2,i,ip);
+	
+		//secondo livello
+		ip=json_object();
+		json_object_set(ip,"address",json_string("130.136.42.1"));
+		json_object_set(ip,"scope",json_string("link"));
+		json_array_insert_new(arr2,i,ip);
+
+
+	json_object_set_new(intf,"ip",arr2);
+
+	
+	
+	//primo livello
+	intf=json_object();
+	json_object_set(intf,"type",json_string("physical"));
+	json_object_set(intf,"name",json_string("eth0"));
 	json_array_insert_new(arr,i,intf);
 	
 	json_object_set_new(json,"interfaces",arr);
