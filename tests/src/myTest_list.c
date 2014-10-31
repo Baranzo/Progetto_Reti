@@ -26,11 +26,6 @@
 
 //dummy del piffero, intanto provo ste benedette funzioni
 
-ipAddr insert_ip (ipAddr *root, ipAddr)
-{
-		ipAddr *pt;
-		
-}
 
 sys_info* fill_dummy(sys_info *pt)
 {
@@ -55,7 +50,7 @@ sys_info* fill_dummy(sys_info *pt)
 	strcpy(intf->dev, "optif0");
 	
 	strcpy(ip->addr,"192.168.0.1");
-	strcpy(ip->scope,"link");
+	strcpy(ip->scope,"local");
 	strcpy(ip->version,"IPv4");
 	
 	pt->interfaces=intf;

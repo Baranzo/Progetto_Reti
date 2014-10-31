@@ -1,0 +1,47 @@
+APPUNTI DI FUNZIONAMENTO SOMMARIO JANSSON
+
+la libreria ragiona con un tipo di dato json_t generico che appunto rappresenta un JSON completo o una parte di esso per essere più chiaro (C stile):
+json_t json;
+json=json_object();
+/*
+ * questa è l'inizializzazione di un tipo generico di JSON che può essere 
+ * quello che vuoi dal JSON completo ad un elemento di un array (vedi dopo)
+ * in questo caso rappresenta il JSON che componiamo
+ */
+
+json_t obj;
+obj=json_array();
+//ora obj è inizializzato ad array e si può comporre con oggetti di tipo json_t
+
+json_t arr_el;
+arr_el=json_object();
+//arr_el è inizializzato come tipo generico json_t
+
+json_object_set(arr_el,"key1",json_string("value1"));
+//arr_el ora contiene la coppia chiave:valore "key1:value1"
+
+/*
+ *NOTA: json_object_set è una funzione che generica per inserire un json_t in un json_t e comporli
+ *uso la funzione json_string perchè l'ultimo valore deve appunto essere di tipo json_t.
+ */
+ json_object_set(arr_el,"key2",json_string("value2"));
+ 
+ /*
+  * ora arr_el e formata da due coppie "key:value", a questo punto posso settare l'insieme di valori di arr_el come elemento in posizione 1 (per questo key1-n value1-n [a me non piace...]) con json_array_append_new
+  */
+  
+  json_array_append_new(array,arr_el);
+  
+ json_object_set(json,"array",array);
+ 
+ /* 
+  * e con questa infilo l'array composto da un solo elemento che contiene due elementi key:value nel JSON generale
+  */
+  
+ Tirando le somme:
+ - tutto funziona con il tipo di dato json_t
+ - il JSON appunto si compone di particelle formate da json_t
+ - con json_object_iter_set infili i json_t in altri json_t così da comporre come vuoi il JSON
+ 
+ ATTENZIONE: 
+ la libreira non sa tenere un ordine degli elementi dentro un JSON, o almeno così sembra facendo il dump del json sia su file che a stdout 
