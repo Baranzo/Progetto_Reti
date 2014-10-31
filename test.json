@@ -1,1 +1,0 @@
-{"interfaces": [{"type": "physical", "name": "eth0"}, {"type": "wireless", "name": "wifi0", "ip": [{"scope": "link", "address": "130.136.42.1"}, {"scope": "local", "address": "192.168.0.1"}]}], "memory": 65536, "os": "Baranzian", "name": "BaranzoDummy", "os_version": "0.0.0", "manufacturer": "BaranzoCorp."}
