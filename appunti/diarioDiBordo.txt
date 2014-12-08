@@ -1,0 +1,7 @@
+08/12/2014
+oggi, a casa di Riccardo, proviamo ad avanzare.
+Qui c'e' il progetto interop-dev che tenta di uniformare il formato dei dati per lo scambio di informazioni su reti, device e routing:
+https://github.com/interop-dev/json-for-networks
+
+
+
