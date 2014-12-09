@@ -2,9 +2,6 @@
 #define MAXSTRING 100
 
 
-
-
-
 typedef struct dnsServAdd{
     char address[MAXSTRING];
 };
@@ -61,7 +58,7 @@ typedef struct interface{
 
 
 
-typedef struct deviceConf{
+typedef struct devConf{
     char hostname[MAXSTRING];
     char mantainer[MAXSTRING];
     char description[MAXSTRING];
@@ -77,4 +74,8 @@ typedef struct deviceConf{
     char osVersion[MAXSTRING];
     char osRevision[MAXSTRING];
     char osDescription[MAXSTRING];
+
+    interface *intPtr;
+     
+
 };
