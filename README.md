@@ -9,7 +9,5 @@ ATTENZIONE: durante l'esecuzione del codice di test viene creato un file un live
 
 Raccolta dati e parti di codice utili, o presunti tali, per la realizzazione della parte iniziale del progetto
 
-Savino Sasso
-Riccardo Baranzoni
 
 Per maggiori info e seguire la roadmap vedi la pagina wiki
